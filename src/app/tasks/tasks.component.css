@@ -1,0 +1,47 @@
+.btn {
+    background-color: #403a63;
+    color: #FFE6E6;
+    width: 120px;
+    border-radius: 20px;
+}
+
+.tasks {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 2px 0px black;
+    border-radius: 20px;
+}
+
+.list-group-item {
+    border: 0.5 solid black;
+    background-color: #FFE6E6;
+    border-radius: 20px;
+}
+.modal-content{
+    height: 500px;
+    width: 900px;
+}
+.modal-header {
+    padding-bottom: 5px !important;
+}
+.input {
+    
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    line-height: 28px;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+}
+.datePicker{
+    z-index: 1600 !important;
+    position: relative;
+}
+::ng-deep .cdk-overlay-container{
+    z-index:2000 !important;
+  }

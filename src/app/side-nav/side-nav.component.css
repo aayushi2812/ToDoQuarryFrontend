@@ -1,0 +1,30 @@
+.sideNav{
+    background-color: #403a63;
+    height: 100%;
+}
+.list-group-item{
+    padding: 20px;
+}
+.sideNavItem{
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #403a63;
+    color: white;
+    font-size: 15px;
+}
+.heading{
+    font-size: 20px;
+    background-color: #403a63;
+    color: white;
+    padding: 15px;
+    padding-top: 20px;
+}
+.sideNavItem:hover{
+    background-color: #FFE6E6;
+    color: #403a63;
+}
+.selected{
+    background-color: #FFE6E6;
+    color: #403a63;
+}
