@@ -3,6 +3,7 @@
     color: #FFE6E6;
     width: 120px;
     border-radius: 20px;
+    height: 40px;
 }
 
 .tasks {
@@ -21,9 +22,23 @@
 .modal-content{
     height: 500px;
     width: 900px;
+    background-color: #FFE6E6;
+    border-radius: 20px;
 }
 .modal-header {
     padding-bottom: 5px !important;
+}
+.formField{
+    width: 400px;
+    height: 80px;
+}
+.modal-body{
+    display: grid;
+    justify-content: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
 }
 .input {
     
@@ -45,3 +60,6 @@
 ::ng-deep .cdk-overlay-container{
     z-index:2000 !important;
   }
+.task-option{
+    height: 70px !important;
+}

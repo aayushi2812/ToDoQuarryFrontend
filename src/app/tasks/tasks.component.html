@@ -1,7 +1,18 @@
 <div>
     <div class="tasks">
-        <h1>Today</h1>
+        <h1>Tasks</h1>
         <p>May 28 - Tuesday</p>
+        <mat-selection-list>
+            @for (task of tasks; track task) {
+            <mat-list-option class="task-option">
+                <div>
+                    <p>{{task.taskName}}</p>
+                    <p>Deadline : {{task.deadlineDate | date }}</p>
+                </div>
+            </mat-list-option>
+            }
+        </mat-selection-list>
+
         <hr />
         <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">Add Task</button>
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -14,31 +25,33 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <mat-form-field class="formField">
+
+                    <form class="modal-body" [formGroup]="taskForm">
+                        <mat-form-field class="formField" appearance="outline">
                             <mat-label>Task Name</mat-label>
-                            <input matInput type="text" class="input" />
-                        </mat-form-field> <br />
-                        <mat-form-field [formControl]="datePicker">
+                            <input matInput type="text" class="input" formControlName="taskName" />
+                        </mat-form-field>
+                        <mat-form-field class="formField" appearance="outline">
                             <mat-label>Due date</mat-label>
-                            <input matInput [matDatepicker]="picker">
+                            <input matInput [matDatepicker]="picker" formControlName="deadlineDate">
                             <mat-hint>MM/DD/YYYY</mat-hint>
                             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker class="datePicker" #picker></mat-datepicker>
-                        </mat-form-field><br />
-                        <mat-form-field>
+                        </mat-form-field>
+                        <mat-form-field class="formField" appearance="outline">
                             <mat-label>Priority</mat-label>
-                            <mat-select [(ngModel)]="selectedValue" name="p">
+                            <mat-select formControlName="prioritySelected">
                                 @for (p of priority; track p) {
-                                    <mat-option [value]="p.value">{{p}}</mat-option>
+                                <mat-option [value]="p">{{p}}</mat-option>
                                 }
                             </mat-select>
                         </mat-form-field>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+
+                        <div class="buttons">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" [disabled]="!taskForm.valid" type="submit" (click)="onSubmit()">Save changes</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
