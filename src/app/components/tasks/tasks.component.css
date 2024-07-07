@@ -1,6 +1,6 @@
 .btn {
     background-color: #403a63;
-    color: #FFE6E6;
+    color: #f7f1f1;
     width: 120px;
     border-radius: 20px;
     height: 40px;
@@ -12,19 +12,29 @@
     border: 1px solid black;
     box-shadow: 0px 0px 2px 0px black;
     border-radius: 20px;
+    width: 100%;
 }
 
 .list-group-item {
     border: 0.5 solid black;
-    background-color: #FFE6E6;
+    background-color: #f7f1f1;
     border-radius: 20px;
 }
 .modal-content{
     height: 500px;
     width: 900px;
-    background-color: #FFE6E6;
+    background-color: #f7f1f1;
     border-radius: 20px;
 }
+.mdc-checkbox{
+    background-color: red !important;
+}
+.mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background, .mdc-checkbox__ripple {
+    background-color: red !important;
+}
+::ng-deep .mat-checkbox-frame {
+    border-color: #1f45cc;
+  }
 .modal-header {
     padding-bottom: 5px !important;
 }
@@ -61,5 +71,11 @@
     z-index:2000 !important;
   }
 .task-option{
-    height: 70px !important;
+    padding-top: 15px;
+    border-radius: 10px;
+    height: 80px !important;
+    display: block;
+}
+.task-option:hover{
+    background-color: #c9c4e5;
 }

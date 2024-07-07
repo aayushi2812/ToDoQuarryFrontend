@@ -7,11 +7,11 @@
 }
 .sideNavItem{
     border: none;
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 13px;
     background-color: #403a63;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
 }
 .heading{
     font-size: 20px;
@@ -21,10 +21,10 @@
     padding-top: 20px;
 }
 .sideNavItem:hover{
-    background-color: #FFE6E6;
+    background-color: #f7f1f1;
     color: #403a63;
 }
 .selected{
-    background-color: #FFE6E6;
+    background-color: #f7f1f1;
     color: #403a63;
 }

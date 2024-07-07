@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class TopNavComponent {
   constructor(private router : Router){}
   loginPage(){
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('landingpage');
   }
 }

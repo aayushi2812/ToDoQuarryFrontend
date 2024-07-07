@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { TopNavComponent } from './top-nav/top-nav.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AppComponent } from './app.component';
-import { LandingpageComponent } from './landingpage/landingpage.component';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
 
 export const routes: Routes = [{
     path: '',
