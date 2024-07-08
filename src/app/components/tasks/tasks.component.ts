@@ -39,6 +39,7 @@ export class TasksComponent implements OnInit{
     deadlineDate: new FormControl(new Date('yyyy-MM-dd'), Validators.required),
     prioritySelected: new FormControl('', Validators.required),
   })
+  
   onSubmit(){
     const temp = this.datePipe.transform(this.taskForm.value.deadlineDate, 'yyyy-MM-dd');
     this.item = {
@@ -48,10 +49,11 @@ export class TasksComponent implements OnInit{
     }
     this.service.addToList(this.item).subscribe((data) => {
       this.list = data;
-      console.log(this.list);
     })
+    window.location.reload();
     this.service.getList().subscribe((data) => {
       this.list = data;
+      console.log(this.list);
     })
     this.taskForm.reset();
   }

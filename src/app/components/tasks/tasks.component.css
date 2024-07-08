@@ -79,3 +79,12 @@
 .task-option:hover{
     background-color: #c9c4e5;
 }
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 600px){
+    .top-bar{
+        display: block;
+    }    
+}
